@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Background Colors -->
+    <color name="bg_primary">#0F172A</color>
+    <color name="bg_card">#1E293B</color>
+    <color name="bg_elevated">#334155</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#F1F5F9</color>
+    <color name="text_secondary">#94A3B8</color>
+
+    <!-- Stroke -->
+    <color name="stroke_color">#334155</color>
+
+    <!-- Accent -->
+    <color name="accent_purple">#7C3AED</color>
+    <color name="accent_purple_light">#A78BFA</color>
+
+    <!-- Category Colors -->
+    <color name="color_security">#F43F5E</color>
+    <color name="color_ai">#10B981</color>
+    <color name="color_dev">#3B82F6</color>
+    <color name="color_default">#94A3B8</color>
+
+    <!-- Progress bar -->
+    <color name="progress_fill">#7C3AED</color>
+    <color name="progress_bg">#334155</color>
+
+    <!-- Bottom nav -->
+    <color name="nav_selected">#7C3AED</color>
+    <color name="nav_unselected">#64748B</color>
 </resources>

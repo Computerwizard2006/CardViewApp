@@ -2,11 +2,11 @@ package com.example.mycardview;
 
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.mycardview.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        bottomNavigationView = findViewById(R.id.bottomNav);
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         loadFragment(new HomeFragment());
 
@@ -25,18 +25,13 @@ public class MainActivity extends AppCompatActivity {
 
             Fragment fragment = null;
 
-            if(item.getItemId() == R.id.home){
-
+            int itemId = item.getItemId();
+            if (itemId == R.id.nav_home) {
                 fragment = new HomeFragment();
-
-            } else if(item.getItemId() == R.id.explore){
-
+            } else if (itemId == R.id.nav_explore) {
                 fragment = new ExploreFragment();
-
-            } else if(item.getItemId() == R.id.profile){
-
+            } else if (itemId == R.id.nav_profile) {
                 fragment = new ProfileFragment();
-
             }
 
             return loadFragment(fragment);
@@ -44,13 +39,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private boolean loadFragment(Fragment fragment){
+    private boolean loadFragment(Fragment fragment) {
 
-        if(fragment != null){
+        if (fragment != null) {
 
             getSupportFragmentManager()
                     .beginTransaction()
-                    .replace(R.id.fragmentContainer, fragment)
+                    .replace(R.id.fragment_container, fragment)
                     .commit();
 
             return true;
